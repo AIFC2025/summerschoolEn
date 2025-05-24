@@ -1,0 +1,74 @@
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+/* Display none until init */
+.owl-carousel {
+    display: block; /* 确保轮播组件显示 */
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* 确保内容不溢出 */
+}
+
+/* Wrapper and Items */
+.owl-carousel .owl-wrapper {
+    position: relative;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.owl-carousel .owl-item {
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    transition: height 500ms ease-in-out;
+}
+
+/* Navigation Controls */
+.owl-controls {
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+.owl-dots {
+    margin-bottom: 40px;
+}
+
+/* Mouse grab icon */
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+/* Optimization for Smooth Animation */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+
